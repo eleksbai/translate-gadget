@@ -1,0 +1,25 @@
+[project]
+name = "translate-gadget"
+version = "0.1.0"
+description = "一个基于 PySide6 的桌面翻译小工具"
+readme = "README.md"
+authors = [
+    { name = "hyman", email = "eleksbai@qq.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "PySide6>=6.7",
+    "alibabacloud_alimt20181012>=1.0.1,<2.0.0",
+    "alibabacloud_tea_openapi>=0.3.1,<1.0.0",
+]
+
+[project.scripts]
+translate-gadget = "translate_gadget:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["uv_build>=0.12.11,<0.13.0"]
+build-backend = "uv_build"
