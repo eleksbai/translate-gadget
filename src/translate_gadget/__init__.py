@@ -19,6 +19,7 @@ def main() -> None:
         datefmt="%H:%M:%S",
     )
 
+    from PySide6.QtGui import QIcon
     from PySide6.QtWidgets import QApplication, QDialog
 
     from translate_gadget.config import ConfigManager
@@ -28,7 +29,13 @@ def main() -> None:
     from translate_gadget.tray import TrayIcon
 
     app = QApplication(sys.argv)
+    app.setApplicationName("Translate Gadget")
+    app.setApplicationVersion("0.1.0")
+    app.setOrganizationName("TranslateGadget")
     app.setQuitOnLastWindowClosed(False)  # 关闭主窗口时不退出，由托盘控制
+
+    # 设置应用图标（任务栏和窗口标题栏）
+    app.setWindowIcon(QIcon.fromTheme("accessories-text-editor"))
 
     config_manager = ConfigManager()
 
