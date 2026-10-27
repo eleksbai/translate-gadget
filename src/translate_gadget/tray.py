@@ -17,8 +17,8 @@ class TrayIcon(QSystemTrayIcon):
         self._on_settings = on_settings
         self._on_quit = on_quit
 
-        # 占位图标（后续替换为正式设计）
-        self.setIcon(QIcon.fromTheme("accessories-text-editor"))
+        # 使用自定义图标
+        self.setIcon(QIcon("assets/icon.svg"))
         self.setToolTip("Translate Gadget")
 
         self._setup_menu()

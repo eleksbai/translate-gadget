@@ -35,7 +35,7 @@ def main() -> None:
     app.setQuitOnLastWindowClosed(False)  # 关闭主窗口时不退出，由托盘控制
 
     # 设置应用图标（任务栏和窗口标题栏）
-    app.setWindowIcon(QIcon.fromTheme("accessories-text-editor"))
+    app.setWindowIcon(QIcon("assets/icon.svg"))
 
     config_manager = ConfigManager()
 

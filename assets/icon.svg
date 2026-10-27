@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 背景圆角矩形 -->
+  <rect x="4" y="4" width="56" height="56" rx="12" ry="12" fill="#4A90D9"/>
+  
+  <!-- 对话气泡（左侧 - 中文） -->
+  <path d="M 16 20 L 30 20 L 30 36 L 22 36 L 18 42 L 18 36 L 16 36 Z" 
+        fill="white" opacity="0.95"/>
+  
+  <!-- 对话气泡（右侧 - 英文） -->
+  <path d="M 34 28 L 48 28 L 48 44 L 44 44 L 42 50 L 42 44 L 34 44 Z" 
+        fill="white" opacity="0.75"/>
+  
+  <!-- 文字 "文"（左侧气泡） -->
+  <text x="23" y="32" font-family="Arial, sans-serif" font-size="12" 
+        font-weight="bold" fill="#4A90D9" text-anchor="middle">文</text>
+  
+  <!-- 文字 "A"（右侧气泡） -->
+  <text x="41" y="40" font-family="Arial, sans-serif" font-size="12" 
+        font-weight="bold" fill="#4A90D9" text-anchor="middle">A</text>
+  
+  <!-- 箭头（表示翻译方向） -->
+  <path d="M 30 30 L 34 30" stroke="white" stroke-width="2" 
+        stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M 32 28 L 34 30 L 32 32" stroke="white" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+</svg>
