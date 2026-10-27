@@ -141,8 +141,8 @@ class MainWindow(QWidget):
         self.result_label.setVisible(False)
         layout.addWidget(self.result_label)
 
-        # 默认位置：屏幕底部居中
-        self._move_to_bottom_center()
+        # 默认位置：屏幕左上角
+        self._move_to_upper_left()
         # 初始化输入框宽度
         self._adjust_input_width()
 
@@ -167,17 +167,15 @@ class MainWindow(QWidget):
         if self._on_settings is not None:
             self._on_settings()
 
-    def _move_to_bottom_center(self) -> None:
-        """将窗口移动到屏幕底部居中"""
+    def _move_to_upper_left(self) -> None:
+        """将窗口移动到屏幕左上角"""
         from PySide6.QtWidgets import QApplication
 
         screen = QApplication.primaryScreen()
         if screen is None:
             return
         geometry = screen.availableGeometry()
-        x = (geometry.width() - self.width()) // 2 + geometry.x()
-        y = geometry.bottom() - self.height() - 50
-        self.move(x, y)
+        self.move(geometry.x(), geometry.y())
 
     def _adjust_input_width(self) -> None:
         """根据文本内容自动调整输入框宽度，保证内容完整展示"""
@@ -243,7 +241,7 @@ class MainWindow(QWidget):
         self._apply_analogous_scheme()
         t5 = time.perf_counter()
 
-        logger.info(
+        logger.debug(
             "取色耗时: 总计 %.1fms | grabWindow %.1fms | 边缘采样 %.1fms | 配色 %.1fms | "
             "RGB(%d,%d,%d) HSL(%.0f,%.2f,%.2f) dark=%s",
             (t5 - t0) * 1000,
