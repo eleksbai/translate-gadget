@@ -410,7 +410,7 @@ class MainWindow(QWidget):
             ):
                 return super().eventFilter(obj, event)
             if event.type() == QEvent.Type.MouseButtonDblClick:
-                self.input_edit.clear()
+                self._clear_input()
                 return True
             if event.type() == QEvent.Type.MouseButtonPress:
                 if (
