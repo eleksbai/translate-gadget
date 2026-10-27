@@ -44,8 +44,7 @@ uv run python -m translate_gadget
 > **注意**：目前仅支持阿里云翻译 API。注册阿里云账号后，可获得免费翻译额度。
 
 1. 按 `F4` 或右键托盘图标选择「设置」
-2. 填写阿里云翻译 API 配置：
-   - **API 地址**：`https://mt.aliyuncs.com`
+2. 填写阿里云翻译 API 凭证：
    - **App ID**：阿里云 AccessKey ID
    - **密钥**：阿里云 AccessKey Secret
 3. 点击「保存」，配置立即生效
