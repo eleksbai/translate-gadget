@@ -60,7 +60,7 @@ uv run python -m translate_gadget
 
 ### 基本操作
 
-1. **激活窗口**：通过全局热键或点击托盘图标显示翻译窗口
+1. **激活窗口**：点击托盘图标显示翻译窗口
 2. **输入文本**：在输入框中输入要翻译的文本
 3. **执行翻译**：按 `Enter` 键触发翻译
 4. **查看结果**：翻译结果显示在输入框下方
@@ -93,7 +93,6 @@ translate-gadget/
 │   ├── window.py            # 主窗口（动态取色、翻译界面）
 │   ├── translator.py        # 翻译 API 接口
 │   ├── config.py            # 配置管理
-│   ├── hotkey.py            # 全局热键
 │   ├── tray.py              # 系统托盘
 │   ├── settings_dialog.py   # 设置对话框
 │   ├── history.py           # 翻译历史
@@ -108,7 +107,6 @@ translate-gadget/
 | 组件 | 技术 |
 |------|------|
 | GUI 框架 | PySide6 (Qt 6) |
-| 全局热键 | pynput |
 | 配置存储 | QSettings |
 | 依赖管理 | uv |
 

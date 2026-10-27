@@ -9,13 +9,10 @@ class ConfigManager:
     SETTINGS_ORG = "TranslateGadget"
     SETTINGS_APP = "TranslateGadget"
 
-    # 默认值
-    DEFAULT_HOTKEY = "<ctrl>+<alt>+t"
-
     def __init__(self) -> None:
         self.settings = QSettings(self.SETTINGS_ORG, self.SETTINGS_APP)
 
-    # ── API 配置 ──────────────────────────────────────────
+    # ─ API 配置 ──────────────────────────────────────────
 
     # 硬编码常量
     API_URL = "https://mt.aliyuncs.com"
@@ -31,15 +28,6 @@ class ConfigManager:
             "app_id": self.settings.value("api/app_id", ""),
             "secret_key": self.settings.value("api/secret_key", ""),
         }
-
-    # ── 快捷键 ────────────────────────────────────────────
-
-    def save_hotkey(self, hotkey_str: str) -> None:
-        self.settings.setValue("hotkey", hotkey_str)
-        self.settings.sync()
-
-    def load_hotkey(self) -> str:
-        return self.settings.value("hotkey", self.DEFAULT_HOTKEY)
 
     # ── 调试 ────────────────────────────────────────────
 

@@ -39,8 +39,6 @@ class SettingsDialog(QDialog):
         self.secret_key_edit.setEchoMode(QLineEdit.EchoMode.Password)
         form.addRow("AccessKey Secret:", self.secret_key_edit)
 
-        # TODO: 快捷键录入控件（含冲突检测）
-
         layout.addLayout(form)
 
         # 调试选项
